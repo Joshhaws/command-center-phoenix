@@ -16,7 +16,14 @@ defmodule CommandcenterphoenixWeb.Router do
   scope "/", CommandcenterphoenixWeb do
     pipe_through :browser # Use the default browser stack
 
+    get "/users", UserController, :index
+    get "/users/:id", UserController, :show
     get "/", PageController, :index
+  end
+
+  scope "/api", CommandcenterphoenixWeb do
+    pipe_through :api # Use the default browser stack
+
     get "/landing", PageController, :landing
     get "/about", PageController, :about
     get "/contact", PageController, :contact

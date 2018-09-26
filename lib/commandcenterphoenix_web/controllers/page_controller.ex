@@ -6,14 +6,14 @@ defmodule CommandcenterphoenixWeb.PageController do
   end
 
   def landing(conn, _params) do
-    render conn, "index.html"
+    render conn, "index.json"
   end
 
   def about(conn, _params) do
-    render conn, "index.html"
+    render conn, "index.json"
   end
 
   def contact(conn, _params) do
-    render conn, "index.html"
+    render conn, "index.json"
   end
 end
